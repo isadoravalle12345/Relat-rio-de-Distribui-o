@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O Novo Equilíbrio do Setor de Combustíveis</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;font-size:15px;line-height:1.8;color:#111;background:#fff}
+.cover{background:#0a1628;color:#fff;padding:64px 56px 56px}
+.tag{font-family:'Trebuchet MS',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#5a9fd4;margin-bottom:14px}
+h1{font-size:34px;font-weight:400;line-height:1.25;margin-bottom:20px;white-space:nowrap}
+.rule{width:36px;height:2px;background:#5a9fd4;margin-bottom:16px}
+.meta{font-family:'Trebuchet MS',sans-serif;font-size:11px;color:#4a6a8a}
+.page{max-width:800px;margin:0 auto;padding:52px 40px}
+.blk{margin-bottom:52px}
+.bh{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #0a1628}
+.bn{font-family:'Trebuchet MS',sans-serif;font-size:10px;font-weight:700;color:#5a9fd4;letter-spacing:.15em}
+h2{font-size:20px;font-weight:400;color:#0a1628}
+p{margin-bottom:11px;color:#222}
+hr{border:none;border-top:1px solid #e5e7eb;margin:44px 0}
+.fig{margin:24px 0;border:1px solid #e5e7eb;border-radius:2px}
+.fh{background:#f9fafb;padding:11px 16px;border-bottom:1px solid #e5e7eb}
+.ft{font-family:'Trebuchet MS',sans-serif;font-size:10px;font-weight:700;color:#0a1628;text-transform:uppercase;letter-spacing:.07em}
+.fs{font-family:'Trebuchet MS',sans-serif;font-size:11px;color:#6b7280;margin-top:2px}
+.fb{padding:20px 16px}
+.ff{background:#f9fafb;padding:6px 16px;border-top:1px solid #e5e7eb;font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#9ca3af}
+.stats{display:flex;border:1px solid #e5e7eb;border-radius:2px;overflow:hidden;margin-top:14px}
+.st{flex:1;padding:13px 16px;border-right:1px solid #e5e7eb;background:#f9fafb}
+.st:last-child{border-right:none}
+.sl{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.sv{font-family:'Trebuchet MS',sans-serif;font-size:20px;font-weight:700;color:#0a1628}
+.sv.dn{color:#dc2626}.sv.up{color:#16a34a}
+.ss{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#9ca3af;margin-top:1px}
+.info{background:#f5f7fa;border-left:3px solid #0a1628;padding:11px 15px;margin-top:12px;font-family:'Trebuchet MS',sans-serif;font-size:12px;color:#374151;line-height:1.6}
+.hl{color:#dc2626;font-weight:700}
+/* timeline */
+.tl{display:flex;flex-direction:column}
+.tr{display:flex;gap:0}
+.tl-l{width:72px;flex-shrink:0;text-align:right;padding-right:12px;padding-top:2px}
+.badge{display:inline-block;font-family:'Trebuchet MS',sans-serif;font-size:9px;font-weight:700;padding:2px 6px;border-radius:2px;background:#e8f0fe;color:#1a56db}
+.badge.r{background:#1e293b;color:#f8fafc}
+.badge.g{background:#dcfce7;color:#16a34a}
+.tl-m{display:flex;flex-direction:column;align-items:center;width:18px;flex-shrink:0}
+.dot{width:8px;height:8px;border-radius:50%;background:#0a1628;flex-shrink:0;margin-top:4px}
+.dot.r{background:#1e293b}.dot.g{background:#16a34a}
+.ln{width:1px;background:#d1d5db;flex:1;min-height:16px}
+.tl-r{flex:1;padding:0 0 18px 12px}
+.te{font-family:'Trebuchet MS',sans-serif;font-size:13px;font-weight:700;color:#0a1628;margin-bottom:2px}
+.td{font-family:'Trebuchet MS',sans-serif;font-size:11px;color:#6b7280;line-height:1.5}
+/* chain */
+.chain{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cn{background:#f5f7fa;border:1px solid #d1d5db;border-radius:3px;padding:10px 13px;text-align:center}
+.cn.hi{background:#e8f0fe;border-color:#1a56db}
+.cn h4{font-family:'Trebuchet MS',sans-serif;font-size:11px;font-weight:700;color:#0a1628}
+.cn p{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#6b7280;margin:2px 0 0}
+.arr{color:#9ca3af;font-size:14px}
+.segs{display:flex;flex-direction:column;gap:5px}
+.sg{background:#f9fafb;border:1px solid #e5e7eb;border-radius:2px;padding:7px 10px}
+.sg-t{display:flex;justify-content:space-between;align-items:baseline}
+.sg h4{font-family:'Trebuchet MS',sans-serif;font-size:11px;font-weight:700;color:#0a1628}
+.sg-s{font-family:'Trebuchet MS',sans-serif;font-size:12px;font-weight:700;color:#1a56db}
+.sg p{font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#6b7280;margin-top:1px}
+.tgs{display:flex;gap:3px;margin-top:3px}
+.tg{font-family:'Trebuchet MS',sans-serif;font-size:9px;font-weight:700;padding:1px 5px;border-radius:2px;text-transform:uppercase}
+.tgg{background:#dcfce7;color:#15803d}
+.tgy{background:#fef9c3;color:#a16207}
+.tgr{background:#fee2e2;color:#b91c1c}
+.tgn{background:#f3f4f6;color:#374151}
+svg text{font-family:'Trebuchet MS',sans-serif}
+.leg{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.li{display:flex;align-items:center;gap:5px;font-family:'Trebuchet MS',sans-serif;font-size:11px;color:#374151}
+.lc{width:24px;height:3px;border-radius:1px}
+footer{background:#f9fafb;border-top:1px solid #e5e7eb;padding:18px 40px;font-family:'Trebuchet MS',sans-serif;font-size:10px;color:#9ca3af;line-height:1.7}
+/* page break control */
+.fig{page-break-inside:avoid;break-inside:avoid}
+.stats{page-break-inside:avoid;break-inside:avoid}
+.tl{page-break-inside:avoid;break-inside:avoid}
+.tr{page-break-inside:avoid;break-inside:avoid}
+table{page-break-inside:avoid;break-inside:avoid}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="tag">Análise Setorial · Crédito</div>
+  <h1>O Novo Equilíbrio do Setor de Combustíveis</h1>
+  <div class="rule"></div>
+  <div class="meta">Março de 2026 &nbsp;·&nbsp; ANP · BTG Pactual · Receita Federal · Bradesco Research</div>
+</div>
+
+<div class="page">
+
+<!-- 01 -->
+<div class="blk">
+  <div class="bh"><span class="bn">01</span><h2>Estrutura do Mercado e Dinâmica Competitiva</h2></div>
+  <p>A distribuição de combustíveis é um componente essencial da infraestrutura logística do Brasil e passou por uma série de marcos relevantes nos últimos anos. Trata-se de um negócio de margens relativamente apertadas e enorme volume de vendas, no qual a dinâmica competitiva sempre foi extremamente sensível a mudanças regulatórias, tributárias e operacionais. Durante muitos anos, o debate central da indústria foi o combate à ilegalidade e à informalidade, uma pauta recorrente entre os agentes do setor, mas que raramente avançava de forma estrutural. Nos últimos anos, no entanto, alguns sinais sugerem que o setor pode estar entrando em uma nova fase.</p>
+  <p>Antes de discutir as mudanças recentes, é importante entender como funciona a cadeia da distribuição de combustíveis no Brasil. Como ilustrado na Figura 1, o setor funciona como um elo intermediário entre refinarias e importadores — ambos responsáveis pela oferta do produto — e os diferentes canais de venda ao consumidor final. As distribuidoras recebem o combustível das refinarias ou de importadores, realizam atividades de armazenamento e logística e o entregam aos diversos tipos de clientes ao longo da cadeia.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 1 — Cadeia de distribuição e segmentos de venda</div><div class="fs">% do volume total distribuído no Brasil · participação de mercado por canal</div></div>
+    <div class="fb">
+      <!-- top row: supply chain -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:20px;flex-wrap:nowrap;width:100%">
+        <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0">
+          <div class="cn" style="min-width:90px;padding:6px 8px"><h4 style="font-size:10px">Refinarias</h4><p style="margin-top:2px;font-size:9px">Petrobras e outras</p></div>
+          <div class="cn" style="min-width:90px;padding:6px 8px"><h4 style="font-size:10px">Importadores</h4><p style="margin-top:2px;font-size:9px">Tradings e independentes</p></div>
+        </div>
+        <div style="font-size:16px;color:#9ca3af;flex-shrink:0">→</div>
+        <div class="cn hi" style="min-width:110px;text-align:center;padding:6px 8px;flex-shrink:0">
+          <h4 style="font-size:10px">Distribuidoras</h4>
+          <p style="margin-top:3px;font-size:9px;color:#4a6a8a">Recebem, armazenam e entregam o combustível</p>
+        </div>
+        <div style="font-size:16px;color:#9ca3af;flex-shrink:0">→</div>
+        <div style="font-family:'Trebuchet MS',sans-serif;font-size:10px;font-weight:700;color:#4b5563;text-transform:uppercase;letter-spacing:.06em;flex-shrink:0">Canais<br>de venda</div>
+      </div>
+
+      <!-- 4 segments as rows with full explanation -->
+      <div style="font-family:'Trebuchet MS',sans-serif;font-size:10px;font-weight:700;color:#0a1628;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;margin-top:4px">Canais de venda <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#6b7280;font-style:italic">— % do volume total distribuído no Brasil</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+
+        <div class="sg" style="border-left:3px solid #0a1628">
+          <div class="sg-t">
+            <div>
+              <h4 style="font-size:12px">Postos Embandeirados</h4>
+              <p style="margin-top:2px;color:#6b7280">Postos com contrato de exclusividade com uma distribuidora (ex: Shell, Vibra/BR, Ipiranga). Vendem apenas combustível daquela marca.</p>
+            </div>
+            <div style="text-align:right;flex-shrink:0;padding-left:12px">
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:18px;font-weight:700;color:#0a1628">49%</div>
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#9ca3af">do volume</div>
+            </div>
+          </div>
+          <div class="tgs" style="margin-top:6px">
+            <span class="tg tgn">Margem mais alta para a distribuidora</span>
+            <span class="tg tgn">Contrato de 3 a 5 anos</span>
+            <span class="tg tgn">Menor risco de perder o cliente</span>
+          </div>
+        </div>
+
+        <div class="sg" style="border-left:3px solid #4b5563">
+          <div class="sg-t">
+            <div>
+              <h4 style="font-size:12px">Postos Bandeira Branca</h4>
+              <p style="margin-top:2px;color:#6b7280">Postos independentes, sem vínculo com distribuidora específica. Podem trocar de fornecedor a qualquer momento, o que os torna mais sensíveis a variações de preço.</p>
+            </div>
+            <div style="text-align:right;flex-shrink:0;padding-left:12px">
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:18px;font-weight:700;color:#0a1628">33%</div>
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#9ca3af">do volume</div>
+            </div>
+          </div>
+          <div class="tgs" style="margin-top:6px">
+            <span class="tg tgn">Margem menor — disputa por preço a cada compra</span>
+            <span class="tg tgn">Alta rotatividade de fornecedor</span>
+          </div>
+        </div>
+
+        <div class="sg" style="border-left:3px solid #6b7280">
+          <div class="sg-t">
+            <div>
+              <h4 style="font-size:12px">Clientes Corporativos (B2B)</h4>
+              <p style="margin-top:2px;color:#6b7280">Empresas de grande porte com frota própria: mineradoras, agronegócio, transportadoras, construtoras. Compram volumes grandes com contratos anuais ou plurianuais.</p>
+            </div>
+            <div style="text-align:right;flex-shrink:0;padding-left:12px">
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:18px;font-weight:700;color:#0a1628">12%</div>
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#9ca3af">do volume</div>
+            </div>
+          </div>
+          <div class="tgs" style="margin-top:6px">
+            <span class="tg tgn">Margem intermediária</span>
+            <span class="tg tgn">Contratos de 1 a 4 anos</span>
+          </div>
+        </div>
+
+        <div class="sg" style="border-left:3px solid #9ca3af">
+          <div class="sg-t">
+            <div>
+              <h4 style="font-size:12px">Transportadores Revendedores Retalhistas (TRR)</h4>
+              <p style="margin-top:2px;color:#6b7280">Revendedores que entregam diretamente em fazendas, canteiros de obras e localidades sem posto de combustível. Atuam como intermediários no atacado rural.</p>
+            </div>
+            <div style="text-align:right;flex-shrink:0;padding-left:12px">
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:18px;font-weight:700;color:#0a1628">6%</div>
+              <div style="font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#9ca3af">do volume</div>
+            </div>
+          </div>
+          <div class="tgs" style="margin-top:6px">
+            <span class="tg tgn">Margem mais comprimida</span>
+            <span class="tg tgn">Alta sensibilidade a preço</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="ff">Fonte: % = participação no volume total distribuído no Brasil</div>
+  </div>
+
+  <p>Os canais de venda são relativamente diversificados, mas os postos de combustíveis continuam sendo o principal destino do produto distribuído. Os postos embandeirados — aqueles que possuem contrato de exclusividade com uma distribuidora específica — representam aproximadamente metade do volume total distribuído no país. Esse modelo costuma oferecer margens mais altas para as distribuidoras e maior estabilidade comercial, já que os contratos geralmente têm prazos mais longos e garantem exclusividade no fornecimento.</p>
+  <p>Em contraste, os postos de bandeira branca representam cerca de 33% do mercado e funcionam com uma dinâmica comercial muito mais flexível. Como não possuem vínculo contratual com uma distribuidora específica, esses postos podem trocar de fornecedor com maior facilidade, tornando o mercado mais sensível a variações de preço e aumentando a intensidade da competição entre distribuidores. Além do varejo tradicional, as distribuidoras também atendem outros segmentos importantes, como clientes corporativos — empresas de transporte, mineração ou agronegócio — e os TRRs (transportadores revendedores retalhistas), que atuam principalmente em regiões rurais ou localidades sem postos de combustíveis, revendendo o produto diretamente ao consumidor final.</p>
+  <p>Historicamente, o mercado brasileiro de distribuição de combustíveis foi dominado por três grandes companhias — Vibra (antiga BR Distribuidora), Ipiranga e Raízen — que chegaram a concentrar conjuntamente mais de 70% do volume distribuído no país. Durante boa parte da década passada, mantinham a maior parte do mercado nacional em um oligopólio relativamente estável. Nesse período, a Petrobras exercia papel central na oferta de combustíveis, suprindo a maior parte do diesel e da gasolina consumidos no país, e a dinâmica competitiva era relativamente previsível.</p>
+  <p>Esse cenário começou a mudar de forma mais relevante a partir da segunda metade da década passada, especialmente após a mudança da política de preços da Petrobras e a abertura do mercado para importadores independentes. A nova dinâmica trouxe maior volatilidade ao setor, ampliou o número de participantes no mercado e criou espaço para novas formas de arbitragem, tanto comerciais quanto tributárias. Ao longo dos anos seguintes, operadores independentes e redes de postos bandeira branca passaram a ganhar participação de mercado, reduzindo gradualmente o espaço das grandes distribuidoras.</p>
+  <p>A Figura 2 ilustra bem esse movimento. Entre 2017 e 2025, a participação conjunta de Vibra, Ipiranga e Raízen no volume total distribuído no país apresentou uma tendência de queda, saindo de cerca de 64,5% no início da série para mínimas históricas de aproximadamente 53% em fevereiro de 2025. Esse movimento reflete não apenas a entrada de novos participantes, mas também o crescimento de operadores independentes e redes de postos sem bandeira.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 2 — Concentração de mercado: Big Three vs. demais distribuidoras</div><div class="fs">% volume total mensal · jan/17 – dez/25 (gasolina C + diesel B + etanol hidratado)</div></div>
+    <div class="fb">
+      <div class="leg">
+        <div class="li"><div class="lc" style="background:#1a56db"></div>Big Three (Vibra + Ipiranga + Raízen)</div>
+        <div class="li"><div class="lc" style="background:#dc2626"></div>Outras distribuidoras</div>
+      </div>
+      <svg viewBox="0 0 800 210" style="width:100%;height:210px">
+        <!-- grid horizontais -->
+        <line x1="60" y1="160.0" x2="740" y2="160.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="163.5" text-anchor="end" font-size="9" fill="#9ca3af">35%</text>
+        <line x1="60" y1="140.0" x2="740" y2="140.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="143.5" text-anchor="end" font-size="9" fill="#9ca3af">40%</text>
+        <line x1="60" y1="120.0" x2="740" y2="120.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="123.5" text-anchor="end" font-size="9" fill="#9ca3af">45%</text>
+        <line x1="60" y1="100.0" x2="740" y2="100.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="103.5" text-anchor="end" font-size="9" fill="#9ca3af">50%</text>
+        <line x1="60" y1="80.0" x2="740" y2="80.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="83.5" text-anchor="end" font-size="9" fill="#9ca3af">55%</text>
+        <line x1="60" y1="60.0" x2="740" y2="60.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="63.5" text-anchor="end" font-size="9" fill="#9ca3af">60%</text>
+        <line x1="60" y1="40.0" x2="740" y2="40.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="43.5" text-anchor="end" font-size="9" fill="#9ca3af">65%</text>
+        <!-- grid verticais por ano -->
+        <line x1="60.0" y1="20" x2="60.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="60.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2017</text>
+        <line x1="136.3" y1="20" x2="136.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="136.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2018</text>
+        <line x1="212.5" y1="20" x2="212.5" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="212.5" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2019</text>
+        <line x1="288.8" y1="20" x2="288.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="288.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2020</text>
+        <line x1="365.0" y1="20" x2="365.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="365.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2021</text>
+        <line x1="441.3" y1="20" x2="441.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="441.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2022</text>
+        <line x1="517.6" y1="20" x2="517.6" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="517.6" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2023</text>
+        <line x1="593.8" y1="20" x2="593.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="593.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2024</text>
+        <line x1="670.1" y1="20" x2="670.1" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="670.1" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2025</text>
+
+        <!-- Outras -->
+        <polyline points="60.0,158.0 66.4,162.8 72.7,166.4 79.1,167.2 85.4,166.4 91.8,166.0 98.1,166.4 104.5,161.6 110.8,160.8 117.2,159.2 123.6,159.2 129.9,157.6 136.3,152.8 142.6,158.0 149.0,160.4 155.3,164.0 161.7,162.8 168.0,164.8 174.4,161.6 180.7,162.8 187.1,161.2 193.5,156.4 199.8,153.2 206.2,156.0 212.5,150.0 218.9,154.8 225.2,155.2 231.6,156.0 237.9,151.6 244.3,155.2 250.7,156.4 257.0,155.2 263.4,151.6 269.7,148.8 276.1,149.2 282.4,144.0 288.8,139.6 295.1,147.6 301.5,143.2 307.9,137.6 314.2,146.4 320.6,146.8 326.9,147.6 333.3,149.6 339.6,149.6 346.0,151.6 352.3,149.2 358.7,145.2 365.0,151.2 371.4,150.4 377.8,152.8 384.1,155.2 390.5,158.4 396.8,159.6 403.2,159.6 409.5,156.4 415.9,154.8 422.2,158.0 428.6,151.2 435.0,154.4 441.3,150.4 447.7,155.2 454.0,155.6 460.4,157.2 466.7,157.2 473.1,154.4 479.4,160.0 485.8,157.2 492.1,157.2 498.5,156.4 504.9,153.6 511.2,153.6 517.6,146.0 523.9,151.2 530.3,144.8 536.6,143.2 543.0,137.6 549.3,136.0 555.7,136.0 562.1,137.6 568.4,142.8 574.8,138.0 581.1,132.4 587.5,132.4 593.8,126.8 600.2,126.4 606.5,125.6 612.9,121.6 619.3,123.6 625.6,121.6 632.0,122.4 638.3,123.2 644.7,124.0 651.0,118.0 657.4,119.6 663.7,117.6 670.1,116.0 676.4,113.2 682.8,115.2 689.2,116.0 695.5,116.8 701.9,118.8 708.2,120.4 714.6,124.0 720.9,122.4 727.3,129.2 733.6,130.0 740.0,128.4" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,3"/>
+        <!-- Big 3 -->
+        <polyline points="60.0,42.0 66.4,37.2 72.7,33.6 79.1,32.8 85.4,33.6 91.8,34.0 98.1,33.6 104.5,38.4 110.8,39.2 117.2,40.8 123.6,40.8 129.9,42.4 136.3,47.2 142.6,42.0 149.0,39.6 155.3,36.0 161.7,37.2 168.0,35.2 174.4,38.4 180.7,37.2 187.1,38.8 193.5,43.6 199.8,46.8 206.2,44.0 212.5,50.0 218.9,45.2 225.2,44.8 231.6,44.0 237.9,48.4 244.3,44.8 250.7,43.6 257.0,44.8 263.4,48.4 269.7,51.2 276.1,50.8 282.4,56.0 288.8,60.4 295.1,52.4 301.5,56.8 307.9,62.4 314.2,53.6 320.6,53.2 326.9,52.4 333.3,50.4 339.6,50.4 346.0,48.4 352.3,50.8 358.7,54.8 365.0,48.8 371.4,49.6 377.8,47.2 384.1,44.8 390.5,41.6 396.8,40.4 403.2,40.4 409.5,43.6 415.9,45.2 422.2,42.0 428.6,48.8 435.0,45.6 441.3,49.6 447.7,44.8 454.0,44.4 460.4,42.8 466.7,42.8 473.1,45.6 479.4,40.0 485.8,42.8 492.1,42.8 498.5,43.6 504.9,46.4 511.2,46.4 517.6,54.0 523.9,48.8 530.3,55.2 536.6,56.8 543.0,62.4 549.3,64.0 555.7,64.0 562.1,62.4 568.4,57.2 574.8,62.0 581.1,67.6 587.5,67.6 593.8,73.2 600.2,73.6 606.5,74.4 612.9,78.4 619.3,76.4 625.6,78.4 632.0,77.6 638.3,76.8 644.7,76.0 651.0,82.0 657.4,80.4 663.7,82.4 670.1,84.0 676.4,86.8 682.8,84.8 689.2,84.0 695.5,83.2 701.9,81.2 708.2,79.6 714.6,76.0 720.9,77.6 727.3,70.8 733.6,70.0 740.0,71.6" fill="none" stroke="#1a56db" stroke-width="2.5"/>
+        <!-- Labels finais -->
+        <text x="744" y="75.6" font-size="10" fill="#1a56db" font-weight="700">57,1%</text>
+        <text x="744" y="132.4" font-size="10" fill="#dc2626" font-weight="700">42,9%</text>
+      </svg>
+    </div>
+    <div class="ff">Fonte: ANP — Dados Abertos · Gasolina C + Diesel B + Etanol Hidratado · Elaboração: JGP</div>
+  </div>
+
+  <div class="stats">
+    <div class="st"><div class="sl">Big-3 combinado (jan/17)</div><div class="sv">64,5%</div><div class="ss">Início da série</div></div>
+    <div class="st"><div class="sl">Big-3 combinado (dez/25)</div><div class="sv dn">57,1%</div><div class="ss">−7,4 p.p. em 8 anos</div></div>
+    <div class="st"><div class="sl">Outras (dez/25)</div><div class="sv dn">42,9%</div><div class="ss">Máxima histórica da série</div></div>
+  </div>
+
+  <p>Quando observamos essa dinâmica por tipo de combustível, o padrão se repete. Como mostrado na Figura 3, a participação das três grandes distribuidoras caiu ao longo do período nos principais produtos comercializados no país. No diesel — principal combustível em volume no mercado brasileiro — a participação das três empresas apresentou trajetória de queda consistente ao longo da série. Tendência semelhante é observada na gasolina e no etanol hidratado, ainda que com intensidades diferentes. O fato de esse movimento ocorrer simultaneamente em diferentes combustíveis sugere que a mudança competitiva foi estrutural, e não limitada a um segmento específico do setor.</p>
+
+  <div class="fig" style="margin-top:20px">
+    <div class="fh"><div class="ft">Figura 3 — Market share Big Three por produto</div><div class="fs">% volume total mensal por produto · jan/17 – dez/25</div></div>
+    <div class="fb">
+      <div class="leg">
+        <div class="li"><div class="lc" style="background:#1a56db"></div>Diesel B</div>
+        <div class="li"><div class="lc" style="background:#6b7280"></div>Gasolina C</div>
+        <div class="li"><div class="lc" style="background:#9ca3af;border-top:2px dashed #9ca3af;height:0;width:24px"></div>Etanol Hidratado</div>
+      </div>
+      <svg viewBox="0 0 800 210" style="width:100%;height:210px">
+        <line x1="60" y1="160.0" x2="740" y2="160.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="163.5" text-anchor="end" font-size="9" fill="#9ca3af">45%</text>
+        <line x1="60" y1="140.0" x2="740" y2="140.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="143.5" text-anchor="end" font-size="9" fill="#9ca3af">50%</text>
+        <line x1="60" y1="120.0" x2="740" y2="120.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="123.5" text-anchor="end" font-size="9" fill="#9ca3af">55%</text>
+        <line x1="60" y1="100.0" x2="740" y2="100.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="103.5" text-anchor="end" font-size="9" fill="#9ca3af">60%</text>
+        <line x1="60" y1="80.0" x2="740" y2="80.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="83.5" text-anchor="end" font-size="9" fill="#9ca3af">65%</text>
+        <line x1="60" y1="60.0" x2="740" y2="60.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="63.5" text-anchor="end" font-size="9" fill="#9ca3af">70%</text>
+        <line x1="60" y1="40.0" x2="740" y2="40.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="43.5" text-anchor="end" font-size="9" fill="#9ca3af">75%</text>
+        <line x1="60.0" y1="20" x2="60.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="60.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2017</text>
+        <line x1="136.3" y1="20" x2="136.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="136.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2018</text>
+        <line x1="212.5" y1="20" x2="212.5" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="212.5" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2019</text>
+        <line x1="288.8" y1="20" x2="288.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="288.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2020</text>
+        <line x1="365.0" y1="20" x2="365.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="365.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2021</text>
+        <line x1="441.3" y1="20" x2="441.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="441.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2022</text>
+        <line x1="517.6" y1="20" x2="517.6" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="517.6" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2023</text>
+        <line x1="593.8" y1="20" x2="593.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="593.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2024</text>
+        <line x1="670.1" y1="20" x2="670.1" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="670.1" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2025</text>
+        <!-- Etanol -->
+        <polyline points="60.0,135.2 66.4,126.4 72.7,125.6 79.1,122.0 85.4,125.6 91.8,127.6 98.1,124.4 104.5,124.8 110.8,122.4 117.2,122.8 123.6,111.6 129.9,114.0 136.3,126.8 142.6,122.0 149.0,112.4 155.3,116.4 161.7,123.2 168.0,126.0 174.4,126.4 180.7,122.8 187.1,122.4 193.5,123.6 199.8,128.0 206.2,122.4 212.5,130.8 218.9,121.2 225.2,125.6 231.6,120.4 237.9,132.4 244.3,128.0 250.7,124.8 257.0,127.6 263.4,129.6 269.7,129.6 276.1,127.6 282.4,128.0 288.8,134.4 295.1,128.4 301.5,143.2 307.9,163.6 314.2,142.4 320.6,138.8 326.9,134.0 333.3,122.0 339.6,117.2 346.0,111.6 352.3,115.6 358.7,122.0 365.0,115.2 371.4,107.6 377.8,122.4 384.1,108.8 390.5,107.6 396.8,126.8 403.2,120.4 409.5,121.2 415.9,127.6 422.2,118.8 428.6,144.4 435.0,130.0 441.3,134.8 447.7,128.0 454.0,120.4 460.4,117.6 466.7,129.6 473.1,128.8 479.4,127.6 485.8,141.2 492.1,121.2 498.5,115.2 504.9,124.8 511.2,123.6 517.6,136.0 523.9,130.4 530.3,132.4 536.6,123.6 543.0,139.2 549.3,136.4 555.7,141.2 562.1,136.4 568.4,128.8 574.8,130.4 581.1,126.0 587.5,130.4 593.8,129.6 600.2,127.2 606.5,124.4 612.9,132.0 619.3,138.0 625.6,139.2 632.0,145.6 638.3,146.0 644.7,148.8 651.0,147.6 657.4,145.6 663.7,146.8 670.1,150.8 676.4,154.0 682.8,150.8 689.2,153.6 695.5,153.2 701.9,154.4 708.2,158.0 714.6,150.4 720.9,152.4 727.3,152.0 733.6,145.6 740.0,144.8" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,3"/>
+        <!-- Gasolina -->
+        <polyline points="60.0,90.4 66.4,86.4 72.7,85.6 79.1,84.4 85.4,84.8 91.8,82.8 98.1,83.6 104.5,90.0 110.8,89.6 117.2,92.0 123.6,92.0 129.9,93.6 136.3,96.0 142.6,94.8 149.0,94.4 155.3,89.2 161.7,88.4 168.0,94.4 174.4,94.0 180.7,91.6 187.1,94.0 193.5,95.6 199.8,93.2 206.2,90.4 212.5,92.8 218.9,94.0 225.2,94.4 231.6,96.4 237.9,97.6 244.3,94.0 250.7,94.8 257.0,94.8 263.4,96.0 269.7,97.6 276.1,97.2 282.4,100.0 288.8,102.8 295.1,98.4 301.5,106.0 307.9,116.8 314.2,108.8 320.6,106.8 326.9,105.6 333.3,105.2 339.6,103.2 346.0,102.8 352.3,100.4 358.7,100.4 365.0,97.2 371.4,103.6 377.8,105.2 384.1,104.4 390.5,90.8 396.8,87.2 403.2,87.2 409.5,94.4 415.9,90.8 422.2,92.0 428.6,96.4 435.0,90.0 441.3,93.2 447.7,89.6 454.0,95.6 460.4,101.2 466.7,94.0 473.1,97.2 479.4,91.6 485.8,93.6 492.1,91.6 498.5,95.6 504.9,94.0 511.2,92.8 517.6,100.4 523.9,98.4 530.3,104.4 536.6,106.0 543.0,105.6 549.3,113.2 555.7,112.4 562.1,112.0 568.4,114.0 574.8,118.4 581.1,116.0 587.5,112.0 593.8,114.8 600.2,118.0 606.5,116.0 612.9,121.6 619.3,120.0 625.6,121.6 632.0,127.2 638.3,123.2 644.7,124.0 651.0,126.4 657.4,123.2 663.7,122.8 670.1,125.2 676.4,127.2 682.8,124.4 689.2,124.8 695.5,125.2 701.9,120.8 708.2,121.6 714.6,120.4 720.9,121.2 727.3,111.2 733.6,114.4 740.0,112.8" fill="none" stroke="#6b7280" stroke-width="2"/>
+        <!-- Diesel -->
+        <polyline points="60.0,62.0 66.4,58.8 72.7,53.2 79.1,50.4 85.4,52.8 91.8,55.2 98.1,54.8 104.5,58.8 110.8,60.4 117.2,60.4 123.6,63.6 129.9,60.4 136.3,66.8 142.6,60.4 149.0,59.2 155.3,55.2 161.7,51.6 168.0,47.6 174.4,53.2 180.7,52.4 187.1,53.2 193.5,60.0 199.8,66.0 206.2,61.2 212.5,70.8 218.9,64.8 225.2,62.4 231.6,61.2 237.9,65.6 244.3,63.6 250.7,62.0 257.0,63.6 263.4,68.0 269.7,73.2 276.1,70.8 282.4,76.8 288.8,83.6 295.1,74.0 301.5,76.8 307.9,75.6 314.2,70.8 320.6,72.4 326.9,73.2 333.3,72.0 339.6,74.0 346.0,71.6 352.3,76.0 358.7,79.2 365.0,72.8 371.4,74.4 377.8,67.6 384.1,67.2 390.5,68.4 396.8,64.0 403.2,66.4 409.5,68.4 415.9,71.2 422.2,67.2 428.6,72.0 435.0,70.8 441.3,77.2 447.7,71.6 454.0,67.2 460.4,60.8 466.7,64.0 473.1,66.8 479.4,60.8 485.8,62.4 492.1,67.6 498.5,68.4 504.9,72.4 511.2,71.2 517.6,79.2 523.9,71.6 530.3,80.8 536.6,83.6 543.0,92.0 549.3,90.8 555.7,90.8 562.1,88.4 568.4,78.4 574.8,83.2 581.1,96.8 587.5,96.0 593.8,106.4 600.2,106.4 606.5,110.0 612.9,111.6 619.3,107.2 625.6,110.4 632.0,103.6 638.3,104.4 644.7,100.8 651.0,111.6 657.4,110.8 663.7,112.4 670.1,114.0 676.4,117.6 682.8,117.2 689.2,113.6 695.5,112.8 701.9,111.6 708.2,108.0 714.6,103.6 720.9,105.6 727.3,99.2 733.6,96.0 740.0,98.4" fill="none" stroke="#1a56db" stroke-width="2.5"/>
+        <!-- Labels finais -->
+        <text x="744" y="102.4" font-size="10" fill="#1a56db" font-weight="700">60,4%</text>
+        <text x="744" y="116.8" font-size="10" fill="#6b7280" font-weight="700">56,8%</text>
+        <text x="744" y="148.8" font-size="10" fill="#9ca3af" font-weight="700">48,8%</text>
+      </svg>
+    </div>
+    <div class="ff">Fonte: ANP — Dados Abertos · Elaboração: JGP</div>
+  </div>
+  <p style="margin-top:16px">Parte desse movimento pode ser explicada pela própria estrutura econômica da distribuição de combustíveis. O setor opera com margens relativamente reduzidas, enquanto a carga tributária incidente sobre combustíveis é elevada. Esse desequilíbrio cria incentivos econômicos relevantes para práticas irregulares. Ao longo dos anos, o mercado conviveu com diferentes tipos de irregularidades, desde sonegação de ICMS até adulteração de combustíveis, uso de notas fiscais frias e descumprimento de obrigações regulatórias. Quando essas práticas se tornam disseminadas, o impacto competitivo é significativo: operadores que atuam de forma irregular conseguem vender combustíveis a preços substancialmente inferiores aos do mercado formal.</p>
+  <p>Esse ambiente pressionou margens e contribuiu para a perda de participação das distribuidoras formais ao longo da última década. Nos últimos anos, entretanto, alguns eventos começaram a alterar essa dinâmica. Uma combinação de fatores — incluindo maior pressão fiscal dos estados, atuação mais ativa de órgãos reguladores e operações policiais voltadas à cadeia de combustíveis — passou a reduzir o espaço para operações irregulares. Os efeitos já são visíveis nos dados: após atingir o piso histórico de aproximadamente 53% em fevereiro de 2025, a participação conjunta do Big Three voltou a crescer, alcançando cerca de 55% em janeiro de 2026 — uma recuperação de aproximadamente 2 p.p. em menos de um ano.</p>
+</div>
+
+<hr>
+
+<!-- 02 -->
+<div class="blk">
+  <div class="bh"><span class="bn">02</span><h2>O turning point recente</h2></div>
+  <p>A Figura 4 resume os principais marcos regulatórios e de enforcement observados recentemente. A partir de 2023, diversas iniciativas passaram a atuar simultaneamente no fechamento de brechas tributárias e operacionais no setor. Entre elas, destaca-se a implementação da tributação monofásica para diesel e gasolina, que reduziu significativamente o espaço para arbitragem fiscal ao longo da cadeia de distribuição.</p>
+  <p>Até 2023, o ICMS sobre combustíveis era cobrado pelo regime de substituição tributária — um modelo no qual o imposto incidia em múltiplos elos da cadeia, com alíquotas diferentes em cada estado. Na prática, isso criava um ambiente propício à arbitragem fiscal: distribuidores irregulares emitiam notas fiscais em estados com alíquotas mais baixas, recolhiam menos imposto do que deveriam e vendiam o produto mais barato do que os concorrentes que operavam dentro da lei. A complexidade do sistema também dificultava a fiscalização, já que o tributo podia ser parcialmente recolhido — ou não recolhido — em diferentes etapas sem que isso fosse facilmente detectável. Com a implementação da tributação monofásica, a partir de maio de 2023 para diesel e junho de 2023 para gasolina, o ICMS passou a ser cobrado uma única vez, na saída da refinaria ou do importador, com alíquota fixa por litro, uniforme em todo o território nacional. Isso eliminou as brechas que permitiam o recolhimento seletivo ao longo da cadeia e tornou a sonegação estruturalmente mais difícil: quem não pagava o imposto na origem simplesmente não conseguia mais se inserir no mercado de forma competitiva. Posteriormente, novas medidas regulatórias e decisões judiciais também contribuíram para restringir práticas associadas ao mercado informal, incluindo mudanças na responsabilização de agentes da cadeia e maior transparência regulatória em mecanismos como o RenovaBio.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 4 — Linha do tempo regulatória</div><div class="fs">Principais marcos de enforcement e legislação · 2023–2026</div></div>
+    <div class="fb">
+      <div class="tl">
+        <div class="tr"><div class="tl-l"><span class="badge">2023</span></div><div class="tl-m"><div class="dot"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Tributação monofásica diesel e gasolina</div><div class="td">Reduziu espaço para arbitragem fiscal e nivelou o campo competitivo</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge">Set/24</span></div><div class="tl-m"><div class="dot"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Responsabilidade solidária SP · Liminar Amapá revogada</div><div class="td">Fechou brechas regulatórias estaduais críticas para a operação informal</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge">Dez/24</span></div><div class="tl-m"><div class="dot"></div><div class="ln"></div></div><div class="tl-r"><div class="te">RenovaBio — penalidades mais pesadas</div><div class="td">ANP publica lista de distribuidoras inadimplentes em CBIOs</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge">Mai/25</span></div><div class="tl-m"><div class="dot"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Tributação monofásica etanol (PIS/COFINS)</div><div class="td">Fechou principal brecha de arbitragem no etanol. Janela de importação de diesel também fecha em maio.</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge r">Ago/25</span></div><div class="tl-m"><div class="dot r"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Operação Carbono Oculto</div><div class="td">Maior operação da história do setor. 1.000+ postos em 10 estados. R$ 52bi movimentados, R$ 8,67bi em créditos constituídos. PCC controlava distribuidoras, usinas de etanol e terminal portuário.</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge r">Set/25</span></div><div class="tl-m"><div class="dot r"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Interdição da Refit · Operação Cadeia de Carbono</div><div class="td">Refit fechada; ~R$ 240mi em cargas retidas. Vibra ganha ~5 p.p. de market share no RJ em outubro.</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge r">Nov/25</span></div><div class="tl-m"><div class="dot r"></div><div class="ln"></div></div><div class="tl-r"><div class="te">Operação Poço de Lobato · Lei do Devedor Contumaz</div><div class="td">Maior devedor contumaz do país: R$ 26bi em débitos. R$ 10,2bi em bens bloqueados. Lei aprovada nas duas casas.</div></div></div>
+        <div class="tr"><div class="tl-l"><span class="badge g">Pendente</span></div><div class="tl-m"><div class="dot g"></div></div><div class="tl-r"><div class="te">Monofásico ICMS etanol · PL Notas Fiscais ANP · PL Penalidades</div><div class="td">Pipeline legislativo robusto ainda em andamento</div></div></div>
+      </div>
+    </div>
+    <div class="ff">Fonte: Vibra, Receita Federal</div>
+  </div>
+
+  <p>Entre os eventos mais emblemáticos desse processo está a Operação Carbono Oculto, considerada uma das maiores ações já realizadas contra fraudes na cadeia de combustíveis no país. A operação investigou um esquema de grande escala envolvendo postos, distribuidoras, usinas e estruturas logísticas, evidenciando o grau de sofisticação que algumas redes informais haviam atingido ao longo dos anos. Outro episódio relevante foi a interdição da refinaria privada Refit, cuja atuação havia se tornado um importante ponto de abastecimento para determinados agentes do mercado. A retirada dessa operação do mercado contribuiu para reduzir a oferta associada a práticas irregulares em algumas regiões — a Refit respondia por cerca de 3,2% da produção total de diesel e 5,6% da gasolina no país — e abriu espaço para redistribuição de volumes entre distribuidores formais.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 5 — Operações contra irregularidades</div><div class="fs">Número de operações reportadas ao ICL por ano</div></div>
+    <div class="fb">
+      <svg viewBox="0 0 580 180" style="width:100%;height:180px">
+        <!-- bars: 2022=24, 2023=12, 2024=27, 2025YTD=22, 2025anual=53 -->
+        <!-- max=53, scale: height = val/55*130, base y=150 -->
+        <!-- bars at x: 60,160,260,360,460, width=60 -->
+        <line x1="30" y1="150" x2="560" y2="150" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="30" y1="120" x2="560" y2="120" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="30" y1="90" x2="560" y2="90" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="30" y1="60" x2="560" y2="60" stroke="#e5e7eb" stroke-width="1"/>
+        <line x1="30" y1="30" x2="560" y2="30" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="24" y="153" text-anchor="end" font-size="9" fill="#9ca3af">0</text>
+        <text x="24" y="123" text-anchor="end" font-size="9" fill="#9ca3af">15</text>
+        <text x="24" y="93" text-anchor="end" font-size="9" fill="#9ca3af">30</text>
+        <text x="24" y="63" text-anchor="end" font-size="9" fill="#9ca3af">45</text>
+        <text x="24" y="33" text-anchor="end" font-size="9" fill="#9ca3af">60</text>
+        <!-- 2022: 24 → h=24/60*120=48, y=150-48=102 -->
+        <rect x="60" y="102" width="60" height="48" rx="2" fill="#d1d5db"/>
+        <text x="90" y="97" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="700">24</text>
+        <text x="90" y="163" text-anchor="middle" font-size="9" fill="#9ca3af">2022</text>
+        <!-- 2023: 12 → h=24, y=126 -->
+        <rect x="160" y="126" width="60" height="24" rx="2" fill="#d1d5db"/>
+        <text x="190" y="121" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="700">12</text>
+        <text x="190" y="163" text-anchor="middle" font-size="9" fill="#9ca3af">2023</text>
+        <!-- 2024: 27 → h=54, y=96 -->
+        <rect x="260" y="96" width="60" height="54" rx="2" fill="#d1d5db"/>
+        <text x="290" y="91" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="700">27</text>
+        <text x="290" y="163" text-anchor="middle" font-size="9" fill="#9ca3af">2024</text>
+        <!-- 2025 YTD: 22 → h=44, y=106 -->
+        <rect x="360" y="106" width="60" height="44" rx="2" fill="#d1d5db"/>
+        <text x="390" y="101" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="700">22</text>
+        <text x="390" y="163" text-anchor="middle" font-size="9" fill="#9ca3af">2025 YTD</text>
+        <!-- 2025 anual: 53 → h=106, y=44 -->
+        <rect x="460" y="44" width="60" height="106" rx="2" fill="#dc2626"/>
+        <text x="490" y="39" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="700">53</text>
+        <text x="490" y="163" text-anchor="middle" font-size="9" fill="#9ca3af">2025 Anualiz.</text>
+      </svg>
+    </div>
+    <div class="ff">Fonte: Legal Fuel Institute (ICL)</div>
+  </div>
+
+  <p>A evolução do market share individual das principais distribuidoras ajuda a ilustrar como esse ambiente competitivo se transformou ao longo do tempo. Como mostrado na Figura 6, Vibra, Raízen e Ipiranga apresentaram trajetórias distintas desde 2017. A Vibra manteve ao longo do período a maior participação de mercado entre as três, e após a privatização passou a priorizar margem em detrimento de volume, refletindo uma gestão mais orientada à rentabilidade. Raízen e Ipiranga, por sua vez, oscilaram em torno de patamares semelhantes de participação, refletindo mudanças estratégicas e a própria dinâmica competitiva do setor.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 6 — Market share individual · jan/17 – dez/25</div><div class="fs">% volume total mensal (gasolina C + diesel B + etanol hidratado)</div></div>
+    <div class="fb">
+      <div class="leg">
+        <div class="li"><div class="lc" style="background:#1a56db"></div>Vibra</div>
+        <div class="li"><div class="lc" style="background:#7c3aed"></div>Raízen</div>
+        <div class="li"><div class="lc" style="background:#9ca3af"></div>Ipiranga</div>
+      </div>
+      <svg viewBox="0 0 800 210" style="width:100%;height:210px">
+        <line x1="60" y1="157.1" x2="740" y2="157.1" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="160.6" text-anchor="end" font-size="9" fill="#9ca3af">16%</text>
+        <line x1="60" y1="134.3" x2="740" y2="134.3" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="137.8" text-anchor="end" font-size="9" fill="#9ca3af">18%</text>
+        <line x1="60" y1="111.4" x2="740" y2="111.4" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="114.9" text-anchor="end" font-size="9" fill="#9ca3af">20%</text>
+        <line x1="60" y1="88.6" x2="740" y2="88.6" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="92.1" text-anchor="end" font-size="9" fill="#9ca3af">22%</text>
+        <line x1="60" y1="65.7" x2="740" y2="65.7" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="69.2" text-anchor="end" font-size="9" fill="#9ca3af">24%</text>
+        <line x1="60" y1="42.9" x2="740" y2="42.9" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="46.4" text-anchor="end" font-size="9" fill="#9ca3af">26%</text>
+        <line x1="60.0" y1="20" x2="60.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="60.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2017</text>
+        <line x1="136.3" y1="20" x2="136.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="136.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2018</text>
+        <line x1="212.5" y1="20" x2="212.5" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="212.5" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2019</text>
+        <line x1="288.8" y1="20" x2="288.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="288.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2020</text>
+        <line x1="365.0" y1="20" x2="365.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="365.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2021</text>
+        <line x1="441.3" y1="20" x2="441.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="441.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2022</text>
+        <line x1="517.6" y1="20" x2="517.6" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="517.6" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2023</text>
+        <line x1="593.8" y1="20" x2="593.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="593.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2024</text>
+        <line x1="670.1" y1="20" x2="670.1" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="670.1" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2025</text>
+        <!-- Ipiranga -->
+        <polyline points="60.0,119.4 66.4,114.9 72.7,101.1 79.1,96.6 85.4,101.1 91.8,104.6 98.1,103.4 104.5,111.4 110.8,112.6 117.2,117.1 123.6,112.6 129.9,114.9 136.3,125.1 142.6,121.7 149.0,117.1 155.3,102.3 161.7,105.7 168.0,109.1 174.4,105.7 180.7,106.9 187.1,106.9 193.5,110.3 199.8,116.0 206.2,110.3 212.5,118.3 218.9,117.1 225.2,119.4 231.6,117.1 237.9,128.6 244.3,129.7 250.7,118.3 257.0,113.7 263.4,116.0 269.7,118.3 276.1,116.0 282.4,124.0 288.8,125.1 295.1,117.1 301.5,120.6 307.9,129.7 314.2,128.6 320.6,132.0 326.9,130.9 333.3,134.3 339.6,132.0 346.0,130.9 352.3,129.7 358.7,133.1 365.0,135.4 371.4,128.6 377.8,124.0 384.1,120.6 390.5,126.3 396.8,124.0 403.2,124.0 409.5,134.3 415.9,138.9 422.2,137.7 428.6,136.6 435.0,129.7 441.3,133.1 447.7,137.7 454.0,128.6 460.4,119.4 466.7,128.6 473.1,136.6 479.4,130.9 485.8,129.7 492.1,134.3 498.5,128.6 504.9,129.7 511.2,126.3 517.6,137.7 523.9,136.6 530.3,137.7 536.6,136.6 543.0,140.0 549.3,144.6 555.7,148.0 562.1,141.1 568.4,136.6 574.8,136.6 581.1,135.4 587.5,135.4 593.8,142.3 600.2,143.4 606.5,144.6 612.9,140.0 619.3,144.6 625.6,149.1 632.0,143.4 638.3,143.4 644.7,141.1 651.0,145.7 657.4,144.6 663.7,145.7 670.1,148.0 676.4,150.3 682.8,151.4 689.2,151.4 695.5,150.3 701.9,148.0 708.2,150.3 714.6,145.7 720.9,144.6 727.3,137.7 733.6,138.9 740.0,137.7" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,3"/>
+        <!-- Raízen -->
+        <polyline points="60.0,129.7 66.4,120.6 72.7,126.3 79.1,125.1 85.4,126.3 91.8,127.4 98.1,128.6 104.5,129.7 110.8,125.1 117.2,127.4 123.6,126.3 129.9,124.0 136.3,128.6 142.6,124.0 149.0,121.7 155.3,124.0 161.7,129.7 168.0,127.4 174.4,132.0 180.7,128.6 187.1,124.0 193.5,129.7 199.8,130.9 206.2,125.1 212.5,128.6 218.9,121.7 225.2,122.9 231.6,125.1 237.9,122.9 244.3,117.1 250.7,125.1 257.0,125.1 263.4,122.9 269.7,122.9 276.1,119.4 282.4,122.9 288.8,129.7 295.1,124.0 301.5,138.9 307.9,148.0 314.2,134.3 320.6,127.4 326.9,127.4 333.3,126.3 339.6,121.7 346.0,117.1 352.3,125.1 358.7,124.0 365.0,121.7 371.4,119.4 377.8,121.7 384.1,117.1 390.5,104.6 396.8,104.6 403.2,103.4 409.5,103.4 415.9,106.9 422.2,106.9 428.6,113.7 435.0,108.0 441.3,116.0 447.7,112.6 454.0,104.6 460.4,106.9 466.7,114.9 473.1,114.9 479.4,113.7 485.8,110.3 492.1,117.1 498.5,114.9 504.9,118.3 511.2,122.9 517.6,127.4 523.9,124.0 530.3,127.4 536.6,132.0 543.0,132.0 549.3,125.1 555.7,127.4 562.1,120.6 568.4,119.4 574.8,127.4 581.1,133.1 587.5,130.9 593.8,133.1 600.2,137.7 606.5,143.4 612.9,149.1 619.3,145.7 625.6,149.1 632.0,151.4 638.3,146.9 644.7,146.9 651.0,153.7 657.4,151.4 663.7,151.4 670.1,152.6 676.4,153.7 682.8,152.6 689.2,156.0 695.5,150.3 701.9,144.6 708.2,146.9 714.6,138.9 720.9,142.3 727.3,137.7 733.6,137.7 740.0,140.0" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <!-- Vibra -->
+        <polyline points="60.0,33.7 66.4,33.7 72.7,31.4 79.1,33.7 85.4,32.6 91.8,29.1 98.1,26.9 104.5,32.6 110.8,37.1 117.2,33.7 123.6,40.6 129.9,44.0 136.3,44.0 142.6,37.1 149.0,37.1 155.3,39.4 161.7,32.6 168.0,26.9 174.4,34.9 180.7,34.9 187.1,44.0 193.5,47.4 199.8,49.7 206.2,53.1 212.5,58.9 218.9,53.1 225.2,48.6 231.6,46.3 237.9,49.7 244.3,45.1 250.7,44.0 257.0,52.0 263.4,62.3 269.7,68.0 276.1,71.4 282.4,76.0 288.8,80.6 295.1,72.6 301.5,65.7 307.9,64.6 314.2,53.1 320.6,55.4 326.9,54.3 333.3,46.3 339.6,54.3 346.0,52.0 352.3,53.1 358.7,62.3 365.0,44.0 371.4,56.6 377.8,52.0 384.1,53.1 390.5,52.0 396.8,49.7 403.2,50.9 409.5,49.7 415.9,45.1 422.2,38.3 428.6,52.0 435.0,56.6 441.3,55.4 447.7,41.7 454.0,55.4 460.4,58.9 466.7,41.7 473.1,41.7 479.4,32.6 485.8,45.1 492.1,33.7 498.5,44.0 504.9,46.3 511.2,46.3 517.6,52.0 523.9,40.6 530.3,54.3 536.6,57.7 543.0,69.1 549.3,76.0 555.7,70.3 562.1,79.4 568.4,70.3 574.8,76.0 581.1,88.6 587.5,89.7 593.8,96.6 600.2,92.0 606.5,87.4 612.9,97.7 619.3,92.0 625.6,88.6 632.0,89.7 638.3,92.0 644.7,92.0 651.0,97.7 657.4,97.7 663.7,101.1 670.1,102.3 676.4,106.9 682.8,102.3 689.2,94.3 695.5,101.1 701.9,102.3 708.2,93.1 714.6,94.3 720.9,98.9 727.3,89.7 733.6,85.1 740.0,90.9" fill="none" stroke="#1a56db" stroke-width="2.5"/>
+        <text x="744" y="94.9" font-size="10" fill="#1a56db" font-weight="700">21,8%</text>
+        <text x="744" y="144.0" font-size="10" fill="#7c3aed" font-weight="700">17,5%</text>
+        <text x="744" y="141.7" font-size="10" fill="#9ca3af" font-weight="700">17,7%</text>
+      </svg>
+    </div>
+    <div class="ff">Fonte: ANP — Dados Abertos · Elaboração: JGP</div>
+  </div>
+
+  <p>Apesar dessas diferenças individuais, o comportamento das três empresas ao longo do período reflete uma tendência comum: maior fragmentação do mercado e intensificação da competição. Em alguns momentos, as distribuidoras priorizaram ganho de margem em detrimento de volume, enquanto em outros períodos a disputa por market share se intensificou, especialmente em segmentos mais sensíveis a preço.</p>
+  <p>A dinâmica de margens também ajuda a entender melhor essa evolução. Como ilustrado na Figura 7, o EBITDA por metro cúbico das principais distribuidoras apresentou forte volatilidade ao longo dos últimos anos, refletindo mudanças tanto na dinâmica competitiva quanto no ambiente de preços e custos do setor. Ainda assim, os níveis observados mais recentemente se encontram significativamente acima das médias históricas para as três empresas.</p>
+
+  <div class="fig">
+    <div class="fh"><div class="ft">Figura 7 — EBITDA/m³ por distribuidora</div><div class="fs">R$/m³ · trimestral · 2016–4T25</div></div>
+    <div class="fb">
+      <div class="leg">
+        <div class="li"><div class="lc" style="background:#1a56db"></div>Vibra</div>
+        <div class="li"><div class="lc" style="background:#7c3aed"></div>Raízen</div>
+        <div class="li"><div class="lc" style="background:#9ca3af"></div>Ipiranga</div>
+      </div>
+      <svg viewBox="0 0 810 210" style="width:100%;height:210px">
+        <line x1="60" y1="180.0" x2="740" y2="180.0" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="183.5" text-anchor="end" font-size="9" fill="#9ca3af">R$0</text>
+        <line x1="60" y1="155.4" x2="740" y2="155.4" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="158.9" text-anchor="end" font-size="9" fill="#9ca3af">R$100</text>
+        <line x1="60" y1="130.8" x2="740" y2="130.8" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="134.3" text-anchor="end" font-size="9" fill="#9ca3af">R$200</text>
+        <line x1="60" y1="106.2" x2="740" y2="106.2" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="109.7" text-anchor="end" font-size="9" fill="#9ca3af">R$300</text>
+        <line x1="60" y1="81.5" x2="740" y2="81.5" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="85.0" text-anchor="end" font-size="9" fill="#9ca3af">R$400</text>
+        <line x1="60" y1="56.9" x2="740" y2="56.9" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="60.4" text-anchor="end" font-size="9" fill="#9ca3af">R$500</text>
+        <line x1="60" y1="32.3" x2="740" y2="32.3" stroke="#e5e7eb" stroke-width="1"/>
+        <text x="54" y="35.8" text-anchor="end" font-size="9" fill="#9ca3af">R$600</text>
+        <line x1="60.0" y1="20" x2="60.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="60.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2016</text>
+        <line x1="78.9" y1="20" x2="78.9" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="78.9" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2017</text>
+        <line x1="154.4" y1="20" x2="154.4" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="154.4" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2018</text>
+        <line x1="230.0" y1="20" x2="230.0" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="230.0" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2019</text>
+        <line x1="305.6" y1="20" x2="305.6" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="305.6" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2020</text>
+        <line x1="381.1" y1="20" x2="381.1" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="381.1" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2021</text>
+        <line x1="456.7" y1="20" x2="456.7" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="456.7" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2022</text>
+        <line x1="532.2" y1="20" x2="532.2" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="532.2" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2023</text>
+        <line x1="607.8" y1="20" x2="607.8" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="607.8" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2024</text>
+        <line x1="683.3" y1="20" x2="683.3" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="683.3" y="196" text-anchor="middle" font-size="9" fill="#9ca3af">2025</text>
+        <!-- Ipiranga -->
+        <polyline points="78.9,149.6 97.8,156.5 116.7,142.0 135.6,143.4 154.4,153.6 173.3,163.1 192.2,160.3 211.1,157.3 230.0,153.7 248.9,157.6 267.8,153.0 286.7,151.8 305.6,158.7 324.4,171.1 343.3,155.1 362.2,160.2 381.1,154.7 400.0,162.0 418.9,164.2 437.8,150.9 456.7,152.6 475.6,143.9 494.4,158.9 513.3,136.8 532.2,153.8 551.1,159.6 570.0,117.9 588.9,109.1 607.8,143.9 626.7,145.6 645.6,141.1 664.4,104.7 683.3,143.3 702.2,128.5 721.1,136.7 740.0,135.6" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,3"/>
+        <!-- Raízen -->
+        <polyline points="248.9,158.7 267.8,159.3 286.7,145.7 305.6,157.8 324.4,174.6 343.3,156.1 362.2,157.3 381.1,150.3 400.0,158.8 418.9,159.8 437.8,141.7 456.7,154.1 475.6,139.9 494.4,167.5 513.3,157.9 532.2,40.1 551.1,164.3 570.0,133.1 588.9,132.0 607.8,129.6 626.7,149.9 645.6,147.9 664.4,147.9 683.3,145.8 702.2,148.8 721.1,143.2 740.0,135.1" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <!-- Vibra -->
+        <polyline points="60.0,163.9 78.9,164.6 97.8,168.7 116.7,157.0 135.6,160.3 154.4,161.2 173.3,167.6 192.2,165.8 211.1,164.7 230.0,158.3 248.9,167.5 267.8,160.8 286.7,156.5 305.6,165.4 324.4,154.3 343.3,158.3 362.2,141.3 381.1,148.8 400.0,151.7 418.9,151.7 437.8,140.5 456.7,150.1 475.6,137.3 494.4,158.1 513.3,143.1 532.2,161.8 551.1,155.2 570.0,119.0 588.9,48.0 607.8,124.3 626.7,136.8 645.6,21.0 664.4,144.3 683.3,120.7 702.2,138.5 721.1,132.0" fill="none" stroke="#1a56db" stroke-width="2.5"/>
+        <text x="744" y="132.0" font-size="10" fill="#1a56db" font-weight="700">R$195</text>
+        <text x="744" y="148.0" font-size="10" fill="#7c3aed" font-weight="700">R$182</text>
+        <text x="744" y="160.0" font-size="10" fill="#9ca3af" font-weight="700">R$180</text>
+      </svg>
+    </div>
+      <div class="info" style="margin-top:12px">
+  
+      </div>
+      <table style="width:100%;border-collapse:collapse;margin-top:12px;font-family:'Trebuchet MS',sans-serif;font-size:11px">
+        <thead>
+          <tr style="border-bottom:2px solid #0a1628">
+            <th style="text-align:left;padding:6px 8px;color:#0a1628;font-weight:700"></th>
+            <th style="text-align:right;padding:6px 8px;color:#0a1628;font-weight:700">4T25 (último)</th>
+            <th style="text-align:right;padding:6px 8px;color:#0a1628;font-weight:700">Média histórica¹</th>
+            <th style="text-align:right;padding:6px 8px;color:#0a1628;font-weight:700">Mediana histórica¹</th>
+            <th style="text-align:right;padding:6px 8px;color:#0a1628;font-weight:700">vs. média</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:7px 8px;font-weight:700;color:#1a56db">Vibra</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700">R$195/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$116/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$98/m³</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700;color:#16a34a">+68%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:7px 8px;font-weight:700;color:#7c3aed">Raízen</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700">R$182/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$119/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$122/m³</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700;color:#16a34a">+53%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:7px 8px;font-weight:700;color:#6b7280">Ipiranga</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700">R$180/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$130/m³</td>
+            <td style="text-align:right;padding:7px 8px;color:#6b7280">R$111/m³</td>
+            <td style="text-align:right;padding:7px 8px;font-weight:700;color:#16a34a">+39%</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-family:'Trebuchet MS',sans-serif;font-size:9px;color:#9ca3af;margin-top:6px">¹ Média e mediana excluem trimestres com eventos não-recorrentes acima de R$350/m³ · Série Vibra desde 2016 · Ipiranga desde 1T17 · Raízen desde 2T19</div>
+    <div class="ff">Fonte: Relatórios trimestrais · Elaboração: JGP</div>
+  </div>
+
+  <div class="stats">
+    <div class="st"><div class="sl">EBITDA/m³ estimado (2025)</div><div class="sv">~R$154/m³</div><div class="ss">BTG Pactual</div></div>
+    <div class="st"><div class="sl">EBITDA/m³ projetado (2026)</div><div class="sv up">~R$175/m³</div><div class="ss">BTG Pactual</div></div>
+  </div>
+  <p style="margin-top:16px">Esse movimento sugere que a redução da concorrência irregular pode já estar produzindo efeitos na rentabilidade operacional das distribuidoras. Mesmo considerando a volatilidade natural do setor — influenciada por fatores como preços internacionais de combustíveis, capital de giro e dinâmica de estoques — o patamar atual de margens parece indicar um ambiente competitivo mais racional do que o observado em períodos anteriores. Caso o processo recente de formalização do mercado se mantenha, esse novo patamar de rentabilidade pode representar uma mudança estrutural relevante para o setor.</p>
+  <p>Para investidores de crédito, essa evolução é particularmente relevante. Em um negócio caracterizado por margens operacionais relativamente apertadas e muito exposto a fatores macroeconômicos, mudanças estruturais na intensidade competitiva podem ter impacto significativo na geração de caixa e, consequentemente, na qualidade de crédito das empresas do setor.</p>
+
+</div>
+
+<hr>
+
+<!-- 03 -->
+<div class="blk">
+  <div class="bh"><span class="bn">03</span><h2>Movimentos estratégicos no setor</h2></div>
+  <p>Recentemente, começaram a surgir discussões sobre potenciais movimentos estratégicos no setor, envolvendo principalmente Ipiranga e Raízen.</p>
+  <p>A Raízen atravessa um momento financeiro particularmente delicado, com dívida bruta de R$ 70 bilhões e alavancagem acima de 5,0x, e anunciou recentemente uma Recuperação Extrajudicial como mecanismo para estruturar uma solução consensual com seus credores. O problema nunca foi o negócio de distribuição em si — que sempre carregou valor intrínseco relevante, estimado entre R$ 24 bilhões e R$ 32 bilhões —, mas a estrutura de capital desbalanceada. O desfecho mais provável passa primeiro pelo endereçamento da dívida com os credores. A partir daí, dois cenários se desenham: no primeiro, a Shell passa a ter um papel mais determinante nas decisões da companhia, mantendo a Raízen como um competidor já naturalmente disciplinado — sem incentivo para guerra de margem ou derrubada de preço para defender volume. No segundo, uma vez equacionada a RE, há a possibilidade de a companhia separar os dois negócios, com uma empresa independente passando a tocar exclusivamente a operação de distribuição — potencialmente com um cap table bastante diferente do atual. Vale destacar que a companhia não tem sinalizado publicamente intenção de separar os negócios — o tema foi levantado por Cosan e BTG durante as negociações —, mas não deixa de ser um caminho possível no futuro.</p>
+  <p>No caso da Ipiranga, a mídia reportou em março de 2026 negociações avançadas entre Ultrapar e Chevron para a venda de uma participação de 30% na companhia, com acordo de preço já estabelecido e discussões em fase de governança. Não é coincidência que a transação ocorra num momento em que a formalização do mercado começa a se refletir nos resultados das grandes distribuidoras — o que torna o ativo mais atrativo do que era há alguns anos.</p>
+  <p>Por fim, o contrato de exclusividade entre Vibra e Petrobras para comercialização de combustíveis vence em 2029, e a Petrobras já sinalizou que não pretende renová-lo nos mesmos moldes. O desfecho dessa renegociação terá implicações relevantes para a dinâmica competitiva do setor no médio prazo.</p>
+  <p>Em conjunto, esses três casos sugerem que o setor de distribuição de combustíveis pode entrar em uma fase de rearranjo relevante no curto e médio prazo. Há possibilidade de movimentações importantes nas três grandes distribuidoras, seja via reestruturação financeira, mudança acionária, entrada de novo sócio estratégico ou revisão de acordos comerciais centrais.</p>
+</div>
+
+<hr>
+
+<!-- 04 -->
+<div class="blk">
+  <div class="bh"><span class="bn">04</span><h2>Conclusão</h2></div>
+  <p>A distribuição de combustíveis no Brasil parece estar entrando em uma nova fase, marcada por um ambiente competitivo mais racional e por sinais de recomposição de rentabilidade das distribuidoras formais. Depois de vários anos de perda de participação das grandes companhias em meio à fragmentação do mercado e ao avanço de práticas irregulares, os dados mais recentes sugerem uma inflexão relevante, apoiada pelo endurecimento regulatório, pelo fechamento de brechas tributárias e pela intensificação das ações de enforcement ao longo da cadeia. Esse processo já começa a aparecer tanto na recuperação de market share do Big Three quanto nos níveis de EBITDA por metro cúbico, atualmente acima das médias históricas das principais empresas do setor.</p>
+  <p>Ao mesmo tempo, o setor entra nesse novo momento com uma agenda relevante de rearranjo estratégico entre seus principais players. A reestruturação da Raízen, as discussões envolvendo a Ipiranga e a futura redefinição da relação comercial entre Vibra e Petrobras indicam que, além da melhora operacional, a indústria pode passar por mudanças societárias e competitivas importantes nos próximos anos. Em conjunto, esses movimentos reforçam a leitura de que o setor deixou para trás uma fase marcada sobretudo por pressão competitiva desordenada e pode caminhar para uma configuração mais disciplinada.</p>
+</div>
+
+</div><!-- /page -->
+
+<footer>Este material tem caráter informativo e não constitui recomendação de investimento. Valores de market share estimados com base em séries ANP e relatórios setoriais. Dados de EBITDA/m³ aproximados a partir de relatórios BTG Pactual.</footer>
+
+</body>
+</html>
